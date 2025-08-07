@@ -677,3 +677,43 @@
         .hero-stats {
             animation-delay: 0.8s;
         }
+
+/* 1. Make sure each section scrolls into view below the fixed navbar */
+section {
+    /* height of your navbar + some breathing room */
+    scroll-margin-top: 80px;
+  }
+  
+  /* 2. Give each major section its own background (to visually separate them) */
+  #features,
+  #about,
+  #contact {
+    position: relative;
+    z-index: 1;
+    background-color: var(--bg-secondary);  /* a slightly lighter dark background */
+    padding: 100px 0;
+  }
+  
+  /* 3. Style the contact list so your items aren’t hidden or un-styled */
+  .contact-list {
+    list-style: none;
+    margin: 2rem 0;
+    padding: 0;
+  }
+  .contact-list li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+  }
+  .contact-list li i {
+    color: var(--accent);
+  }
+  
+  /* 4. (Optional) Add a bit more padding to your footer so it never overlaps content */
+  .footer {
+    padding-top: 4rem;
+    padding-bottom: 2rem;
+  }
+  
